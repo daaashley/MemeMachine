@@ -1,0 +1,454 @@
+body {
+    background-color: #181818;
+}
+
+#landing-header{
+    z-index:1;
+    /*z-index ignored if position is static*/
+    position:relative;
+    text-align:center;
+    padding-top:10vh;
+}
+.search{
+  margin-top:50px;
+  max-width:40%;
+}
+.or{
+  color:white;
+}
+
+.shadow{
+  text-shadow: 2px 2px 5px black;
+  margin-bottom: 2%;
+}
+.navbar-default{
+ background-color: rgba(33, 30, 30, 1);
+ border-color:rgba(33, 30, 30, 1);
+}
+.navbar-brand{
+  margin-top:10px;
+}
+
+#landing-header h1{
+    color:#fff;
+}
+.nav-item{
+  margin-top:10px;
+}
+
+.bar{
+  z-index:2;
+  position:relative;
+  
+  
+}
+
+.slideshow {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top: 0;
+    left:0;
+    z-index:-1;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*fills bg with bg image*/
+  background-size: cover;
+  /*centers bg image*/
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(http://getwallpapers.com/wallpaper/full/f/0/1/43461.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://wallpapercave.com/wp/wp1822736.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(http://getwallpapers.com/wallpaper/full/3/a/e/43638.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(http://getwallpapers.com/wallpaper/full/e/c/5/43487.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://getwallpapers.com/wallpaper/full/3/0/7/43568.jpg);
+  animation-delay: 40s; 
+}
+.slideshow li:nth-child(6) { 
+  background-image: url(http://getwallpapers.com/wallpaper/full/2/e/8/43662.jpg);
+  animation-delay: 50s; 
+}
+.slideshow li:nth-child(7) { 
+  background-image: url(http://getwallpapers.com/wallpaper/full/8/8/7/43676.jpg);
+  animation-delay: 60s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+.navbar{
+    margin-bottom:0px;
+}
+.profilebox{
+    position:absolute;
+    left:75px;
+    background:rgba(0,0,0,0.75);
+    color:rgba(0,0,0,0.75);
+    height:350px;
+    width:250px;
+}
+
+.profilebox2{
+    position:absolute;
+    
+    background:rgba(0,0,0,0.75);
+    color:rgba(0,0,0,0.75);
+    height:350px;
+    width:100%;
+}
+
+
+.feed{
+    position:absolute;
+    left:370px;
+    background:rgba(0,0,0,0.75);
+    
+    height:100%;
+    min-width:450px;
+    width:40%;
+    overflow:scroll;
+}
+.feed2{
+    position:absolute;
+    left:370px;
+    top: 425px;
+    background:rgba(0,0,0,0.75);
+    
+    height:100%;
+    min-width:450px;
+    width:40%;
+    overflow:scroll;
+}
+.otherbox{
+    position:absolute;
+    left:1025px;
+    background:rgba(0,0,0,0.75);
+    
+    height:300px;
+    
+    width:20%;
+}
+.maxlimpost{
+    max-width:50px;
+    max-height:50px;
+    float:left;
+}
+.postusername{
+    display:inline;
+    font-size:14px;
+    color: white;
+    float:center;
+}
+.maxlim{
+    max-width:150px;
+    max-height:150px;
+}
+.stats{
+    color:white;
+    font-size:14px;
+    margin:5 auto;
+    padding-left:5px;
+}
+.btngroup{
+  
+}
+#hidingScrollBar{
+  overflow: hidden;
+}
+.hideScrollBar{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin-right: 14px;
+  padding-right: 28px; /*This would hide the scroll bar of the right. To be sure we hide the scrollbar on every browser, increase this value*/
+  padding-bottom: 15px; /*This would hide the scroll bar of the bottom if there is one*/
+}
+.usernamedsp{
+  font-size:30px;
+  color:white;
+}
+.statsbar{
+  background:white;
+  color:white;
+  height:70px;
+  width:100%;
+  position: absolute;
+  top: 300px;
+}
+.stats2{
+    color:black;
+    font-size:14px;
+    margin:5 auto;
+    padding-left:5px;
+    display:inline;
+}
+.bio{
+    color:white;
+    font-size:12px;
+    margin: 5 auto;
+    padding-left:5px;
+}
+.username{
+    color:white;
+    font-size:16px;
+    margin: 5 auto;
+    padding-left:5px;
+}
+.post{
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+    height:350px;
+    width: 475px;
+    margin:0 auto;
+    margin-bottom: 10px;
+}
+.postimg{
+    max-height:225px;
+    margin-top: 40px;
+}
+.posttext{
+    color:white;
+    font-size:14px;
+}
+.btnfloat{
+    float:right;
+}
+.likecount{
+    float:right;
+    color:white;
+    font-size:14px;
+}
+.loginwrap{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    background-image: url(http://getwallpapers.com/wallpaper/full/2/e/8/43662.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+.forgot-password{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 18px;
+}
+.login-box p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.login-box input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.login-box input[type="text"], input[type="password"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+.login-box input[type="submit"]
+{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #1c8adb;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.login-box input[type="submit"]:hover
+{
+  cursor: pointer;
+  background: #39dc79;
+  color: #000;
+}
+.login-box a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+}
+.login-box a:hover
+{
+  color: #39dc79;
+}
+.usernamehead{
+    left:40%;
+    
+}
+.feedbackground{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    background-image: url(http://getwallpapers.com/wallpaper/full/2/e/8/43662.jpg);
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.footer{
+    position:absolute;
+    z-index:11;
+    top:1908px;
+    height:300px;
+    width:100%;
+    color:#263486;
+    background-color: #0C1F51;
+}
+
+#main_content{
+    position:absolute;
+    z-index:1;
+    width:320px;
+    height:720px;
+    background:rgba(0,0,0,0.9);
+    left:50%;
+    top:50%;
+    padding: 70px 30px;
+}
+.signup-form{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url(http://getwallpapers.com/wallpaper/full/2/e/8/43662.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.signup-box{
+  width: 320px;
+  height: 530px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 5px 30px;
+}
+.signup-box p{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.signup-box input{
+  width: 100%;
+  margin-bottom: 20px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.signup-box input[type="text"], input[type="password"]
+{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+.signup-box input[type="submit"]
+{
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #1c8adb;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.signup-box input[type="submit"]:hover
+{
+  cursor: pointer;
+  background: #39dc79;
+  color: #000;
+}
+.signup-box a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+}
+.signup-box a:hover
+{
+  color: #39dc79;
+}

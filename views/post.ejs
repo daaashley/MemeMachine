@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+ 
+     <div class="loginwrap">
+         <div class="login-box">
+         <img src="https://image.ibb.co/jaOYwS/IMG_5452.jpg" class="avatar">
+             <h1>Post memes here</h1>
+             <form action="/post" method="POST">
+                 <p>Meme URL:</p>
+                 <input type="text" name="memeurl" placeholder="Enter URL">
+                 <p>Caption:</p>
+                 <input type="text" name="memecaption" placeholder="Enter Caption">
+                 <p>Tags(comma delimtit):</p>
+                 <input type="text" name="tag" placeholder="Enter Tags">
+                 <input type="submit" name="submit" value="Post">
+                 
+             </form>
+             
+             
+        </div>
+     
+<% include ./partials/footer %>

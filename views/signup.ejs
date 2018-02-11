@@ -1,0 +1,88 @@
+<% include ./partials/header %>
+
+
+        <meta charset="utf-8">
+        <title>Midwest Memes</title>
+<style type="text/css">
+
+        .center {
+    margin: auto;
+    padding: 5%;
+    text-align: center;
+}
+
+        .font1{
+            font-family: 'Nanum Brush Script', cursive;
+            font-size: 50px;
+        }
+        .rcorners {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px; 
+            width: 225px;
+            height: 20px; 
+}
+        .rcorners2 {
+            border-radius: 50px;
+            border: 2px solid #73AD21;
+            padding: 20px; 
+            width: 225px;
+            height: 25px; 
+            
+}
+.signupbg{
+     height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    background-image: url(http://getwallpapers.com/wallpaper/full/2/e/8/43662.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+        
+    </style>
+<body>
+    <div class="signupbg"> 
+        
+            
+    </div>
+        <div id="main_content">
+        
+        <header>          
+        <h1 class="center font1">Tell me a little about yourself!</h1>
+ 
+
+
+    <form  class="center">
+        
+
+        <p class="rcorners2 center">
+            What types of memes would you like to view?<br></p>
+        <p></p>
+        Movies/Shows: <input type="checkbox" id="chkMovies"><br>
+        Political: <input type="checkbox" id="chkPolitics"><br>
+        Animals: <input type="checkbox" id="chkAnimals"><br>
+        All: <input type="checkbox" id="chkAll"><br>
+        <br>
+        <p class="rcorners center">
+            What is your age?<br></p>
+        <p>
+            13-17: <input type="radio" id="young" name="Age"><br>
+            18+: <input type="radio" id='old' name="Age"><br>
+        </p>
+        
+            </form>
+
+        <p class="center rcorners">Email: <input type=text id="email"></p>
+<p></p>
+        <p class="center rcorners">Username: <input type=text id="username"></p>
+<p></p>
+        <p class="center rcorners">Password: <input type="text" id="password"></p>
+        
+        <p class="center"><input type="button" name='btnSubmit' value='Click to complete signup' onclick="calcSalary()"></p>
+
+</div>
+<% include ./partials/footer %>
