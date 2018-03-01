@@ -5,7 +5,7 @@ var middleware = require("../middleware");
 
 router.get("/",function(req,res){
     
-   res.render("profile");
+   res.render("profile",{currentUser: req.user});
 });
 
 

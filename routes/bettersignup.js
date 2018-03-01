@@ -21,13 +21,14 @@ router.post("/", function(req,res){
    User.register(newUser, req.body.password, function(err,user){
         if(err){
             
-            //req.flash("error",err.message);
-            return res.render("bettersignup",{currentUser: req.user});
+         console.log(err)
+         res.redirect("/")
         }
-        passport.authenticate("local",(req,res,function(){
+        passport.authenticate("local")(req,res,function(){
             //req.flash("success","Welcome to YelpCamp " + user.username);
-            res.redirect("/profile/:id",{currentUser:req.user});
-        }));
+            console.log("Success");
+            res.redirect("/");
+        });
     });
     
     

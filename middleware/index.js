@@ -1,6 +1,6 @@
 
 var User = require("../models/user");
-var Posts = require("../models/posts");
+var Post = require("../models/post");
 
 var middlewareObject = {};
 
@@ -8,7 +8,7 @@ middlewareObject.checkPostOwnership = function(req,res,next){
     
      if(req.isAuthenticated()){
      
-         Posts.findById(req.params.id, function(err,foundPost){
+         Post.findById(req.params.id, function(err,foundPost){
         if(err){
             //req.flash("error","Campground not found")
             res.redirect("back");

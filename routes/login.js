@@ -11,14 +11,17 @@ router.get("/",function(req,res){
     //{currentUser: req.user} next to landing
 });
 
-router.post("/login", passport.authenticate("local",
+router.post("/", passport.authenticate("local",
 {
-    successRedirect: "back",
+    
+    successRedirect: "/",
     failureRedirect: "/login"
 }),function(req,res){
-    res.redirect("back");
+    console.log("made it here");
+    res.redirect("/");
 
 });
+
 
 
 
